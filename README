@@ -1,5 +1,6 @@
-## QoS-Aware Packet Router – SystemVerilog RTL & Verification
-* Overview
+#QoS-Aware Packet Router – SystemVerilog RTL & Verification
+
+## Overview
 
 This project implements and verifies a QoS-aware multi-input, multi-output packet router using SystemVerilog.
 The design supports priority-based arbitration, round-robin fairness, and robust backpressure handling, and is verified using a self-checking, protocol-aware testbench.
