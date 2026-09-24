@@ -1,4 +1,4 @@
-## QoS-Aware Packet Router – SystemVerilog RTL & Verification
+# QoS-Aware Packet Router – SystemVerilog RTL & Verification
 
 ## Overview
 
@@ -22,7 +22,7 @@ Router Features
 Inputs: 4 independent packet sources
 Outputs: 2 packet sinks
 
-# Packet Format:
+### Packet Format:
 Destination (dst)
 Priority (prio)
 Payload length (len)
@@ -32,21 +32,21 @@ End-of-packet (last)
 Per-input FIFOs for buffering
 Packet-level locking ensures atomic packet forwarding
 
-# QoS arbitration modes:
+### QoS arbitration modes:
 Priority-based arbitration
 Round-robin tie-breaking for fairness
 
-# Backpressure support:
+### Backpressure support:
 Output stalls propagate correctly
 Data is held stable during stalls
 
 ## Arbitration Logic
 
-# If multiple inputs target the same output:
+### If multiple inputs target the same output:
 Higher priority wins
 If priorities are equal → Round-robin arbitration
 
-# Once a packet is granted:
+### Once a packet is granted:
 The output remains locked to that input until last is transferred
 Prevents packet interleaving and protocol violations
 
